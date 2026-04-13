@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import DotGrid from "./components/DotGrid";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FYP Website",
-  description: "Preliminary project website for advertisement and documentation",
+  title: "Wise Workout — Smart Fitness Tracking",
+  description:
+    "A mobile application that collects exercise data from sensors and wearable devices, provides fitness advice, and facilitates social competitions.",
 };
 
 export default function RootLayout({
@@ -27,7 +31,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        <DotGrid />
+        <div className="relative z-10 flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1 pt-16">{children}</main>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
