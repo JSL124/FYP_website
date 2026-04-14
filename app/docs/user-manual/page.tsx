@@ -159,7 +159,10 @@ export default function UserManualPage() {
         <div className="space-y-24">
           {sections.map((section, i) => (
             <ScrollReveal key={section.id} delay={0.05}>
-              <section id={section.id}>
+              <section
+                id={section.id}
+                className="scroll-mt-24 md:scroll-mt-28"
+              >
                 <div className="flex items-baseline gap-3 mb-6">
                   <span className="font-mono text-sm text-accent">
                     {String(i + 1).padStart(2, "0")}

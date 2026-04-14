@@ -22,6 +22,22 @@ export default function ScrollReveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      return;
+    }
+
+    const threshold = 0.15;
+    const rect = el.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    const isAlreadyVisible =
+      rect.top <= viewportHeight * (1 - threshold) && rect.bottom >= 0;
+
+    if (isAlreadyVisible) {
+      el.classList.add("revealed");
+      return;
+    }
+
+    el.classList.add("reveal-ready");
 
     const observer = new IntersectionObserver(
       ([entry]) => {
