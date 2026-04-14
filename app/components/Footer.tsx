@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FOOTER_COLUMNS, PROJECT } from "@/app/lib/constants";
 
@@ -9,14 +10,22 @@ export default function Footer() {
           <div>
             <Link
               href="/"
-              className="flex items-center gap-2 text-foreground font-bold text-lg"
+              className="inline-flex items-center gap-4 text-foreground"
+              aria-label="Runiac home"
             >
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-black font-black text-sm">
-                W
+              <Image
+                src="/images/brand/runiac-logo.png"
+                alt="Runiac logo"
+                width={88}
+                height={88}
+                className="h-18 w-18 max-w-none object-contain drop-shadow-[0_0_18px_rgba(11,236,34,0.22)]"
+                unoptimized
+              />
+              <span className="text-3xl font-bold tracking-tight sm:text-4xl">
+                Runiac
               </span>
-              {PROJECT.name}
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-muted">
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">
               {PROJECT.tagline}
             </p>
             <p className="mt-2 text-xs text-muted/60">

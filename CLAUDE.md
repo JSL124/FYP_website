@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the **Wise Workout** (CSIT-26-S2-05) preliminary project website — a content-driven, multi-page Next.js site for advertising, presenting, and documenting a mobile fitness application. It is NOT a product platform. Optimize for clarity, presentation quality, and readability over complex interactivity.
+This is the **Wise Workout** (FYP-26-S2-38) preliminary project website — a content-driven, multi-page Next.js site for advertising, presenting, and documenting a mobile fitness application. It is NOT a product platform. Optimize for clarity, presentation quality, and readability over complex interactivity.
 
 Full project context, working agreements, and design guidelines are in [AGENTS.md](AGENTS.md). Read it before making significant changes.
 
@@ -38,6 +38,8 @@ CI (.github/workflows/ci.yml) runs `npm ci && npm run lint && npm run test:ci` o
 | `/features` | `app/features/page.tsx` |
 | `/how-it-works` | `app/how-it-works/page.tsx` |
 | `/docs` | `app/docs/page.tsx` |
+| `/docs/meeting-minutes` | `app/docs/meeting-minutes/page.tsx` |
+| `/docs/meeting-minutes/[slug]` | `app/docs/meeting-minutes/[slug]/page.tsx` |
 | `/docs/user-manual` | `app/docs/user-manual/page.tsx` |
 | `/docs/system-overview` | `app/docs/system-overview/page.tsx` |
 | `/team` | `app/team/page.tsx` |

@@ -55,6 +55,17 @@ body {
   to { opacity: 1; }
 }
 
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes glow-pulse {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 0.8; }
@@ -77,6 +88,12 @@ body {
 
 .animate-fade-in {
   animation: fade-in 0.6s ease-out forwards;
+}
+
+.page-transition {
+  min-height: 100%;
+  animation: page-enter 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
 
 .animate-float {
@@ -138,6 +155,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
   border-radius: 16px;
   padding: 1px;
   background: linear-gradient(135deg, rgba(11, 236, 34, 0.3), transparent 50%);
@@ -161,6 +179,159 @@ body {
 .scroll-reveal.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .page-transition,
+  .animate-fade-in-up,
+  .animate-fade-in,
+  .animate-float,
+  .animate-glow,
+  .scroll-reveal.reveal-ready {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Team member flip card */
+.flip-card {
+  perspective: 1200px;
+  cursor: pointer;
+  outline: none;
+}
+.flip-card:focus-visible .flip-card-inner {
+  box-shadow: 0 0 0 2px var(--accent);
+  border-radius: 16px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  min-height: 420px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.flip-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+.flip-card:hover .flip-card-inner:not(.is-flipped) {
+  transform: translateY(-4px);
+}
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+/* Only the currently facing side receives pointer events */
+.flip-card-inner:not(.is-flipped) .flip-card-back {
+  pointer-events: none;
+}
+.flip-card-inner.is-flipped .flip-card-front {
+  pointer-events: none;
+}
+
+/* Front face — large square photo + meta strip */
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+}
+.team-photo {
+  position: relative;
+  width: 100%;
+  flex: 1 1 auto;
+  background: var(--dark-card);
+  overflow: hidden;
+}
+.team-photo-img {
+  object-fit: cover;
+  object-position: center top;
+}
+.team-photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(140, 140, 140, 0.35);
+}
+.team-photo-placeholder svg {
+  width: 48px;
+  height: 48px;
+}
+.team-photo-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  height: 30%;
+  background: linear-gradient(180deg, transparent, rgba(16, 16, 16, 0.88));
+  pointer-events: none;
+}
+.team-meta {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem 1.5rem 1.25rem;
+  text-align: center;
+  z-index: 1;
+}
+/* Back face — padded, centered, flex column */
+.team-back {
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--dark-card);
+  color: var(--foreground);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.social-icon svg {
+  width: 22px;
+  height: 22px;
+}
+.social-icon:hover {
+  color: var(--accent);
+  border-color: rgba(11, 236, 34, 0.5);
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 0 24px rgba(11, 236, 34, 0.25);
+}
+.social-icon:focus-visible {
+  color: var(--accent);
+  border-color: rgba(11, 236, 34, 0.5);
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 0 24px rgba(11, 236, 34, 0.25);
+  outline: none;
 }
 
 /* Angular section divider — pure CSS */

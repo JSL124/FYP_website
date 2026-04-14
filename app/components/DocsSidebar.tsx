@@ -43,7 +43,7 @@ export default function DocsSidebar() {
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <h3 className="text-xs font-semibold uppercase tracking-wider text-muted mb-4">
+        <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent">
           Documentation
         </h3>
         <nav className="space-y-1">

@@ -27,18 +27,18 @@ export default function DocsIndexPage() {
           </p>
         </ScrollReveal>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid auto-rows-fr gap-6 sm:grid-cols-2">
           {DOC_LINKS.map((doc, i) => (
             <ScrollReveal key={doc.href} delay={i * 0.1}>
-              <Link href={doc.href} className="block group">
-                <GradientCard className="p-8 h-full transition-all duration-200 group-hover:ring-1 group-hover:ring-accent/30">
-                  <h2 className="text-xl font-bold group-hover:text-accent transition-colors">
+              <Link href={doc.href} className="block h-full group">
+                <GradientCard className="flex h-full min-h-[220px] flex-col p-8 transition-all duration-200 group-hover:ring-1 group-hover:ring-accent/30">
+                  <h2 className="text-xl font-bold transition-colors group-hover:text-accent">
                     {doc.label}
                   </h2>
                   <p className="mt-3 text-sm leading-relaxed text-muted">
                     {doc.description}
                   </p>
-                  <p className="mt-4 text-sm font-medium text-accent">
+                  <p className="mt-auto pt-6 text-sm font-medium text-accent">
                     Read more &rarr;
                   </p>
                 </GradientCard>

@@ -1,13 +1,18 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import MeetingMinutesRegistry from "@/app/components/MeetingMinutesRegistry";
 import ScrollReveal from "@/app/components/ScrollReveal";
 import SectionLabel from "@/app/components/SectionLabel";
 import GradientCard from "@/app/components/GradientCard";
-import { PROJECT, TEAM_MEMBERS } from "@/app/lib/constants";
+import TeamMemberCard from "@/app/components/TeamMemberCard";
+import { MEETING_MINUTES, PROJECT, TEAM_MEMBERS } from "@/app/lib/constants";
 
 export const metadata: Metadata = {
   title: "Team — Wise Workout",
   description: "Meet the team behind the Wise Workout mobile application.",
 };
+
+const RECENT_MEETING_MINUTES = MEETING_MINUTES.slice(0, 2);
 
 export default function TeamPage() {
   return (
@@ -29,31 +34,7 @@ export default function TeamPage() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {TEAM_MEMBERS.map((member, i) => (
             <ScrollReveal key={member.name} delay={i * 0.1}>
-              <GradientCard className="p-8 h-full text-center">
-                {/* Avatar placeholder */}
-                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-dashed border-white/10 bg-card">
-                  <svg
-                    className="h-8 w-8 text-muted/40"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0"
-                    />
-                  </svg>
-                </div>
-                <h2 className="text-lg font-bold">{member.name}</h2>
-                <p className="mt-1 text-sm font-medium text-accent">
-                  {member.role}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-                  {member.bio}
-                </p>
-              </GradientCard>
+              <TeamMemberCard member={member} />
             </ScrollReveal>
           ))}
         </div>
@@ -84,8 +65,14 @@ export default function TeamPage() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold">Supervisor Name</h3>
+                  <h3 className="text-lg font-bold">Ee Kiam Keong</h3>
                   <p className="text-sm text-accent">Project Supervisor</p>
+                  <a
+                    href="mailto:kkeesg@yahoo.com.sg"
+                    className="mt-2 inline-block text-sm text-muted transition hover:text-accent"
+                  >
+                    kkeesg@yahoo.com.sg
+                  </a>
                   <p className="mt-2 text-sm text-muted">
                     Providing guidance and oversight for the Wise Workout
                     project.
@@ -94,6 +81,32 @@ export default function TeamPage() {
               </div>
             </GradientCard>
           </ScrollReveal>
+        </div>
+
+        {/* Meeting Minutes */}
+        <div className="mt-24">
+          <ScrollReveal>
+            <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <h2 className="text-2xl font-bold mb-4 sm:text-3xl">
+                  Meeting <span className="text-accent">Minutes</span>
+                </h2>
+                <p className="max-w-3xl text-sm leading-relaxed text-muted sm:text-base">
+                  Recent meeting records that document the team&apos;s planning,
+                  decisions, and next steps throughout the project.
+                </p>
+              </div>
+              <Link
+                href="/docs/meeting-minutes"
+                className="inline-flex items-center gap-2 self-start rounded-full border border-accent/30 px-4 py-2 text-sm font-medium text-accent transition hover:border-accent hover:bg-accent/10"
+              >
+                View all meeting records
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
+          </ScrollReveal>
+
+          <MeetingMinutesRegistry meetings={RECENT_MEETING_MINUTES} delayStep={0.1} />
         </div>
 
         {/* Project Info */}

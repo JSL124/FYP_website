@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAV_LINKS, PROJECT } from "@/app/lib/constants";
+import { NAV_LINKS } from "@/app/lib/constants";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,12 +15,18 @@ export default function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <Link
           href="/"
-          className="flex items-center gap-2 text-foreground font-bold text-lg tracking-tight"
+          className="flex items-center gap-3 text-foreground"
         >
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-accent text-black font-black text-sm">
-            W
-          </span>
-          {PROJECT.name}
+          <Image
+            src="/images/brand/runiac-logo.png"
+            alt="Runiac logo"
+            width={140}
+            height={76}
+            className="h-10 w-auto max-w-none object-contain drop-shadow-[0_0_18px_rgba(11,236,34,0.22)]"
+            priority
+            unoptimized
+          />
+          <span className="text-lg font-bold tracking-tight">Runiac</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

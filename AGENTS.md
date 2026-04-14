@@ -8,7 +8,7 @@ This repository is for a preliminary project website focused on advertisement, i
 
 ## Project Identity
 
-- **Project ID**: CSIT-26-S2-05
+- **Project ID**: FYP-26-S2-38
 - **Title**: A Mobile Application for Wise Workout
 - **Tagline**: Smart fitness tracking powered by sensor data, personalized plans, and social motivation
 - **Core Features**:
@@ -23,6 +23,7 @@ This repository is for a preliminary project website focused on advertisement, i
 - Stack: Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4
 - Current scope: multi-page project website for advertisement, presentation, and online documentation
 - Site structure: multi-page (Landing, Features, How It Works, Docs, Team, Demo)
+- Docs structure: includes overview, user manual, system overview, meeting minutes index, and meeting minute detail pages
 - Global layout: `app/layout.tsx` (shared Header, Footer, DotGrid)
 - Global styles: `app/globals.css`
 - Content data: `app/lib/constants.ts`
@@ -117,6 +118,8 @@ The site uses a multi-page structure:
 | `/how-it-works` | System workflow, architecture overview |
 | `/docs` | Documentation hub (index) |
 | `/docs/user-manual` | User manual with screenshots and usage instructions |
+| `/docs/meeting-minutes` | Meeting minutes index with all recorded meetings |
+| `/docs/meeting-minutes/[slug]` | Detailed documentation page for an individual meeting |
 | `/docs/system-overview` | Architecture, tech stack, data flow |
 | `/team` | Team members, supervisor, project info |
 | `/demo` | Presentation-friendly scrollable walkthrough |
@@ -294,7 +297,7 @@ npm run test:ci
 
 ### 2026-04-14 (v2)
 
-- Added Wise Workout project identity (CSIT-26-S2-05) and core feature list.
+- Added Wise Workout project identity (FYP-26-S2-38) and core feature list.
 - Restructured information architecture from single-page to multi-page (8 routes).
 - Expanded documentation guidelines to match professor's rubric requirements (user manual, screenshots, system overview).
 - Added presentation support section for live demo/evaluation use.

@@ -4,12 +4,13 @@ import type {
   Step,
   Stat,
   TeamMember,
+  MeetingMinute,
   FooterColumn,
   DocLink,
 } from "./types";
 
 export const PROJECT = {
-  id: "CSIT-26-S2-05",
+  id: "FYP-26-S2-38",
   name: "Wise Workout",
   title: "A Mobile Application for Wise Workout",
   tagline:
@@ -115,19 +116,192 @@ export const STATS: Stat[] = [
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
-    name: "Team Member 1",
-    role: "Developer",
-    bio: "Responsible for mobile application development and sensor integration.",
+    name: "Lee Jinseo",
+    role: "Leader",
+    bio: "Passionate about orchestrating multiple AI tools to accelerate engineering. Leads the team by weaving AI-driven workflows into product design, development, and day-to-day collaboration.",
+    photo: "/images/team/lee-jinseo.jpg",
+    github: "https://github.com/JSL124",
+    linkedin:
+      "https://www.linkedin.com/in/jinseo-lee-58b255341/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    email: "jason2188@naver.com",
   },
   {
     name: "Team Member 2",
-    role: "Developer",
-    bio: "Focused on backend services, data analysis, and fitness algorithms.",
+    role: "Member",
+    bio: "Profile details coming soon.",
   },
   {
     name: "Team Member 3",
-    role: "Developer",
-    bio: "Handles social features, UI/UX design, and testing.",
+    role: "Member",
+    bio: "Profile details coming soon.",
+  },
+  {
+    name: "Team Member 4",
+    role: "Member",
+    bio: "Profile details coming soon.",
+  },
+  {
+    name: "Team Member 5",
+    role: "Member",
+    bio: "Profile details coming soon.",
+  },
+];
+
+export const MEETING_MINUTES: MeetingMinute[] = [
+  {
+    slug: "2026-04-11-week-1-project-direction-review",
+    date: "11 Apr 2026",
+    title: "Week 1 Project Direction Review",
+    summary:
+      "The team reviewed competitor running apps, aligned on a beginner-friendly product direction, and refined the project's feature and monetization strategy.",
+    preview: "Market research, feature direction, and business model alignment.",
+    status: "Archived",
+    totalDuration: "1 hour",
+    location: "Online (Zoom)",
+    meetingType: "Weekly Project Call - Week 1",
+    calledBy: "Lee Jinseo",
+    facilitator: "Lee Jinseo",
+    noteTaker: "Lee Jinseo",
+    timekeeper: "Lee Jinseo",
+    attendees: [
+      "Lee Jinseo",
+      "Kenji Yeo",
+      "Kaif Lim Er",
+      "Liu Zhi Hui",
+      "Konada Obadiah Nahshon",
+    ],
+    decisions: [
+      "Position community and gamification as key differentiators from existing running apps.",
+      "Keep core features accessible for free and reserve advanced personalization for premium users.",
+      "Use the market research findings to sharpen feature selection and product scope.",
+    ],
+    actions: [
+      "Compare competing app features in more detail by 16 Apr 2026.",
+      "Identify missing features and finalize five additional features by 12 Apr 2026.",
+      "Write short feature explanations for the selected additions by 16 Apr 2026.",
+    ],
+    agenda: [
+      {
+        duration: "15 mins",
+        topic: "Market Research Review",
+        presenter: "All members",
+        discussion: [
+          "Reviewed Strava, Nike Run Club, Runkeeper, Garmin Connect, and Whoop as benchmark products.",
+          "Compared how each platform balances community features, training guidance, analytics depth, and hardware dependence.",
+          "Identified common baseline features such as GPS tracking, watch integration, achievements, and route sharing.",
+        ],
+        conclusions: [
+          "Existing apps split clearly between community-driven and individual-training experiences.",
+          "Pricing and paywall pressure are major differentiators in the current market.",
+          "The team should compete by balancing accessibility with meaningful analytics and motivation features.",
+        ],
+        actions: [
+          "Compare features across apps in detail by 16 Apr 2026.",
+          "Identify missing features worth adding by 12 Apr 2026.",
+        ],
+      },
+      {
+        duration: "20 mins",
+        topic: "Proposed Feature Discussion",
+        presenter: "All members",
+        discussion: [
+          "Reviewed required project features: exercise data collection, exercise effect estimation, and fitness pattern advice.",
+          "Proposed additional ideas including a heatmap system, AI-driven training recommendations, popular route recommendation, zone capture, dynamic challenges, and mission-based experiences.",
+          "Aligned on designing for beginners who need sustained motivation rather than a purely metrics-heavy app.",
+        ],
+        conclusions: [
+          "Gamification should become the core product differentiator.",
+          "The feature set should stay beginner-friendly and avoid copying standard badge systems too closely.",
+          "Premium features can exist, but the main experience should remain broadly accessible.",
+        ],
+        actions: [
+          "Finalize five additional features by 12 Apr 2026.",
+          "Write one to two paragraphs explaining each selected feature by 16 Apr 2026.",
+        ],
+      },
+      {
+        duration: "10 mins",
+        topic: "Business Model Discussion",
+        presenter: "All members",
+        discussion: [
+          "Discussed the drawbacks of existing pricing models, especially the heavy paywalls in Strava and the hardware or subscription costs associated with Garmin and Whoop.",
+          "Explored a hybrid business model that keeps core tracking and motivation tools free while reserving more advanced coaching and analytics for paying users.",
+        ],
+        conclusions: [
+          "A hybrid free-plus-premium model is the most realistic direction.",
+          "Advanced personalization and analytics are the strongest candidates for subscription features.",
+        ],
+        actions: [
+          "Decide which features remain free and which become subscription-based by 12 Apr 2026.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "2026-04-04-ice-breaking-and-scope-alignment",
+    date: "04 Apr 2026",
+    title: "Ice-Breaking and Scope Alignment",
+    summary:
+      "The first team meeting focused on introductions, initial collaboration setup, and agreeing on the broad direction for the project research phase.",
+    preview: "Introductions and initial project scope alignment.",
+    status: "Archived",
+    totalDuration: "50 mins",
+    location: "SIM Block B",
+    meetingType: "Ice Breaking",
+    calledBy: "Jinseo Lee",
+    facilitator: "Jinseo Lee",
+    noteTaker: "Jinseo Lee",
+    timekeeper: "Jinseo Lee",
+    attendees: [
+      "Lee Jinseo",
+      "Kenji Yeo",
+      "Kaif Lim Er",
+      "Liu Zhi Hui",
+    ],
+    decisions: [
+      "Confirmed the team structure and selected a team leader.",
+      "Agreed to begin by researching existing running and health applications.",
+      "Narrowed the initial project scope toward a running-focused application concept.",
+    ],
+    actions: [
+      "Each member researches one competing app by 11 Apr 2026.",
+      "Complete initial feature brainstorming by 11 Apr 2026.",
+    ],
+    agenda: [
+      {
+        duration: "15:30 - 15:40",
+        topic: "Team Introduction",
+        presenter: "Jinseo Lee",
+        discussion: [
+          "Each team member introduced themselves and shared their background and interests.",
+          "The session established early familiarity to support smoother collaboration in later project stages.",
+        ],
+        conclusions: [
+          "The team gained a basic understanding of one another's strengths and working style.",
+        ],
+        actions: [
+          "Confirm the team leader on 04 Apr 2026.",
+        ],
+      },
+      {
+        duration: "15:40 - 16:20",
+        topic: "Project Scope Selection",
+        presenter: "Jinseo Lee",
+        discussion: [
+          "Discussed the need for market research before finalizing the product direction.",
+          "Agreed that each member would study one existing running or health-related application.",
+          "Planned to evaluate what current users like, what frustrates them, and which features are missing.",
+        ],
+        conclusions: [
+          "The initial scope was aligned around a running-focused application concept.",
+          "Competitor research would drive the next round of feature discussion.",
+        ],
+        actions: [
+          "Each member researches one competing app by 11 Apr 2026.",
+          "Complete initial feature brainstorming by 11 Apr 2026.",
+        ],
+      },
+    ],
   },
 ];
 
@@ -153,7 +327,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Project",
     links: [
       { label: "Team", href: "/team" },
-      { label: "GitHub", href: "#" },
+      { label: "GitHub", href: "https://github.com/JSL124/FYP_Runiac" },
     ],
   },
 ];
@@ -163,6 +337,11 @@ export const DOC_LINKS: DocLink[] = [
     label: "User Manual",
     href: "/docs/user-manual",
     description: "Learn how to use every feature of the Wise Workout app.",
+  },
+  {
+    label: "Meeting Minutes",
+    href: "/docs/meeting-minutes",
+    description: "Browse project meeting records, decisions, and detailed notes.",
   },
   {
     label: "System Overview",
