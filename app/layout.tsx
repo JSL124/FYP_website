@@ -20,6 +20,26 @@ export const metadata: Metadata = {
   title: "Runiac — Smart Fitness Tracking",
   description:
     "A mobile application that collects exercise data from sensors and wearable devices, provides fitness advice, and facilitates social competitions.",
+  openGraph: {
+    title: "Runiac — Smart Fitness Tracking",
+    description:
+      "A mobile application that collects exercise data from sensors and wearable devices, provides fitness advice, and facilitates social competitions.",
+    images: [
+      {
+        url: "/images/brand/social-preview.png",
+        width: 2814,
+        height: 1536,
+        alt: "Runiac neon logo social preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Runiac — Smart Fitness Tracking",
+    description:
+      "A mobile application that collects exercise data from sensors and wearable devices, provides fitness advice, and facilitates social competitions.",
+    images: ["/images/brand/social-preview.png"],
+  },
 };
 
 export default function RootLayout({
