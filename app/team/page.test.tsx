@@ -62,6 +62,34 @@ describe("Team page", () => {
     );
   });
 
+  it("shows Kenji Yeo's description and profile links after flipping the card", () => {
+    render(<TeamPage />);
+
+    fireEvent.click(
+      screen.getByRole("button", {
+        name: /kenji yeo card\. click to show details\./i,
+      })
+    );
+
+    expect(
+      screen.getByText(/supports the project with a practical engineering mindset/i)
+    ).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /kenji yeo on github/i })).toHaveAttribute(
+      "href",
+      "https://github.com/batokok"
+    );
+    expect(
+      screen.getByRole("link", { name: /kenji yeo on linkedin/i })
+    ).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/kenji-y-808149118?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+    );
+    expect(screen.getByRole("link", { name: /kenji yeo email/i })).toHaveAttribute(
+      "href",
+      "mailto:Kenjiyeo0@gmail.com"
+    );
+  });
+
   it("renders a compact recent meeting minutes registry with detail links", () => {
     render(<TeamPage />);
 
