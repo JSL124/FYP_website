@@ -31,7 +31,7 @@ describe("Team page", () => {
 
     expect(screen.getByAltText(/lee jinseo/i)).toBeInTheDocument();
     expect(within(leeCard).getByRole("heading", { name: /lee jinseo/i })).toBeInTheDocument();
-    expect(within(leeCard).getByText(/^leader$/i)).toBeInTheDocument();
+    expect(within(leeCard).getByText(/^project manager$/i)).toBeInTheDocument();
   });
 
   it("shows description and social links after flipping Lee Jinseo's card", () => {

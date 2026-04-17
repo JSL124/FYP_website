@@ -117,7 +117,7 @@ export const STATS: Stat[] = [
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Lee Jinseo",
-    role: "Leader",
+    role: "Project Manager",
     bio: "Passionate about orchestrating multiple AI tools to accelerate engineering. Leads the team by weaving AI-driven workflows into product design, development, and day-to-day collaboration.",
     photo: "/images/team/lee-jinseo.jpg",
     github: "https://github.com/JSL124",
@@ -127,7 +127,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: "Kenji Yeo",
-    role: "Member",
+    role: "Backend Developer",
     bio: "Supports the project with a practical engineering mindset, helping shape implementation details and keep the Wise Workout experience clear, reliable, and easy to present.",
     photo: "/images/team/kenji-yeo.png",
     github: "https://github.com/batokok",
@@ -137,26 +137,29 @@ export const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: "Kaif Lim Er",
-    role: "Member",
+    role: "Frontend Developer",
     bio: "Contributes to the project as a steady team member, supporting the development of a clear, approachable, and well-presented Wise Workout experience.",
+    photo: "/images/team/kaif-lim-er.jpg",
     github: "https://github.com/cookiemonztar2-design",
     linkedin: "https://sg.linkedin.com/in/kaif-lim-82a012227",
     email: "Kaif.2001@yahoo.com",
   },
   {
     name: "LIUZHIHUI",
-    role: "Member",
+    role: "Database & Data Engineer",
     bio: "Supports the team with focused implementation work, helping turn project ideas into a clearer and more dependable Wise Workout presentation.",
     photo: "/images/team/liuzhihui.png",
     github: "https://github.com/LZH051",
+    linkedin: "https://www.linkedin.com/in/zhihui-liu-301b783bb",
     email: "1789511934@qq.com",
   },
   {
     name: "KONADA OBADIAH NAHSHON",
-    role: "Member",
+    role: "UI/UX Designer & QA Lead",
     bio: "Brings a focused and dependable presence to the team, supporting the project with implementation effort that helps keep Wise Workout polished and presentation-ready.",
     photo: "/images/team/konada-obadiah-nahshon.png",
     github: "https://github.com/nahshonn",
+    linkedin: "https://www.linkedin.com/in/obadiahnahshon",
     email: "obadiahnahshon@gmail.com",
   },
 ];
