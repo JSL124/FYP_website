@@ -18,7 +18,7 @@ export default function Footer() {
                 alt="Runiac logo"
                 width={88}
                 height={88}
-                className="h-18 w-18 max-w-none object-contain drop-shadow-[0_0_18px_rgba(11,236,34,0.22)]"
+                className="h-18 w-18 max-w-none object-contain drop-shadow-[0_0_18px_rgba(139,92,246,0.35)]"
                 unoptimized
               />
               <span className="text-3xl font-bold tracking-tight sm:text-4xl">

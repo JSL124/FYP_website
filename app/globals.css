@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #101010;
+  --background: #07040f;
   --foreground: #f3efef;
-  --accent: #0bec22;
-  --charcoal: #101010;
-  --dark-card: #1a1a1a;
-  --muted: #8c8c8c;
+  --accent: #8b5cf6;
+  --accent-strong: #7c3aed;
+  --charcoal: #07040f;
+  --dark-card: #120e1c;
+  --muted: #9691a8;
   --border: rgba(255, 255, 255, 0.08);
   --header-height: 64px;
 }
@@ -113,11 +114,11 @@ body {
 
 /* Glow effects */
 .glow-green {
-  box-shadow: 0 0 40px rgba(11, 236, 34, 0.15), 0 0 80px rgba(11, 236, 34, 0.05);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.25), 0 0 80px rgba(139, 92, 246, 0.08);
 }
 
 .glow-green-text {
-  text-shadow: 0 0 40px rgba(11, 236, 34, 0.3);
+  text-shadow: 0 0 40px rgba(139, 92, 246, 0.4);
 }
 
 /* Custom scrollbar */
@@ -158,7 +159,7 @@ body {
   pointer-events: none;
   border-radius: 16px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(11, 236, 34, 0.3), transparent 50%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), transparent 50%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -322,15 +323,15 @@ body {
 }
 .social-icon:hover {
   color: var(--accent);
-  border-color: rgba(11, 236, 34, 0.5);
+  border-color: rgba(139, 92, 246, 0.55);
   transform: translateY(-2px) scale(1.08);
-  box-shadow: 0 0 24px rgba(11, 236, 34, 0.25);
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.35);
 }
 .social-icon:focus-visible {
   color: var(--accent);
-  border-color: rgba(11, 236, 34, 0.5);
+  border-color: rgba(139, 92, 246, 0.55);
   transform: translateY(-2px) scale(1.08);
-  box-shadow: 0 0 24px rgba(11, 236, 34, 0.25);
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.35);
   outline: none;
 }
 

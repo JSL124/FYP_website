@@ -10,14 +10,15 @@ import { PROJECT, FEATURES, STEPS, STATS } from "./lib/constants";
 function Hero() {
   return (
     <section className="relative flex min-h-[calc(100vh-64px)] flex-col items-center justify-center overflow-hidden px-6">
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-accent/5 blur-[120px] animate-glow" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[820px] w-[820px] rounded-full bg-accent/20 blur-[160px] animate-glow" />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[380px] w-[380px] rounded-full bg-[#a78bfa]/30 blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <ScrollReveal>
           <p className="section-label mb-4">[ {PROJECT.id} ]</p>
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <h1 className="text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="bg-gradient-to-b from-white via-white to-white/60 bg-clip-text text-5xl font-bold leading-[1.1] tracking-tight text-transparent sm:text-6xl lg:text-7xl">
             {PROJECT.name}
           </h1>
         </ScrollReveal>
@@ -35,7 +36,7 @@ function Hero() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/features"
-              className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-black transition-all duration-200 hover:brightness-110 hover:shadow-[0_0_30px_rgba(11,236,34,0.3)]"
+              className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(139,92,246,0.3)] transition-all duration-200 hover:brightness-110 hover:shadow-[0_0_40px_rgba(139,92,246,0.55)]"
             >
               Explore Features
             </Link>
@@ -223,7 +224,7 @@ function StatsSection() {
 function CTA() {
   return (
     <section className="relative px-6 py-32">
-      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-accent/5 blur-[120px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-accent/15 blur-[140px]" />
       <div className="relative z-10 mx-auto max-w-3xl text-center">
         <ScrollReveal>
           <SectionLabel>[ Explore ]</SectionLabel>
@@ -239,7 +240,7 @@ function CTA() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/docs"
-              className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-black transition-all duration-200 hover:brightness-110 hover:shadow-[0_0_30px_rgba(11,236,34,0.3)]"
+              className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(139,92,246,0.3)] transition-all duration-200 hover:brightness-110 hover:shadow-[0_0_40px_rgba(139,92,246,0.55)]"
             >
               View Documentation
             </Link>

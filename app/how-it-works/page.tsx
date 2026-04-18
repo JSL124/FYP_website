@@ -119,7 +119,7 @@ export default function HowItWorksPage() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/docs/system-overview"
-                className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-black transition-all duration-200 hover:brightness-110"
+                className="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(139,92,246,0.3)] transition-all duration-200 hover:brightness-110 hover:shadow-[0_0_40px_rgba(139,92,246,0.55)]"
               >
                 System Documentation
               </Link>

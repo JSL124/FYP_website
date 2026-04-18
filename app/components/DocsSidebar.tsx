@@ -19,7 +19,7 @@ export default function DocsSidebar() {
       {/* Mobile toggle */}
       <button
         onClick={() => setOpen(!open)}
-        className="lg:hidden fixed bottom-6 right-6 z-40 rounded-full bg-accent p-3 text-black shadow-lg hover:brightness-110 transition"
+        className="lg:hidden fixed bottom-6 right-6 z-40 rounded-full bg-accent p-3 text-white shadow-lg hover:brightness-110 transition"
         aria-label="Toggle docs navigation"
       >
         <svg

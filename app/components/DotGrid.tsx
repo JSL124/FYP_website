@@ -35,7 +35,7 @@ export default function DotGrid() {
       aria-hidden="true"
       style={{
         backgroundImage:
-          "radial-gradient(circle, rgba(11,236,34,0.10) 1px, transparent 1px)",
+          "radial-gradient(circle, rgba(139,92,246,0.12) 1px, transparent 1px)",
         backgroundSize: "28px 28px",
         top: "-20%",
         bottom: "-20%",

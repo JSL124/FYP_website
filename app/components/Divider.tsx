@@ -3,7 +3,7 @@ export default function Divider({ flip = false }: { flip?: boolean }) {
     <div
       className="divider-slant"
       style={{
-        background: "#1a1a1a",
+        background: "var(--dark-card)",
         transform: flip ? "scaleY(-1)" : undefined,
       }}
     />
